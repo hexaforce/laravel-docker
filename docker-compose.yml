@@ -9,7 +9,7 @@ services:
     networks:
       - laravel-docker
     volumes:
-        - ./:/usr/share/nginx/laravel
+        - ./laravel:/usr/share/nginx/laravel
 
   nginx:
     image: nginx:1.16-alpine
@@ -20,8 +20,8 @@ services:
     ports:
         - "8080:80"
     volumes:
-        - ./:/usr/share/nginx/laravel
         - ./docker/default.conf:/etc/nginx/conf.d/default.conf
+        - ./laravel:/usr/share/nginx/laravel
 
   mysql:
     image: mysql:8.0
