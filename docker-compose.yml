@@ -18,7 +18,7 @@ services:
     networks:
       - laravel-docker
     ports:
-        - "8080:80"
+        - 8080:80
     volumes:
         - ./default.conf:/etc/nginx/conf.d/default.conf
         - ./laravel:/usr/share/nginx/laravel
@@ -30,20 +30,31 @@ services:
       - laravel-docker
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=homestead
+      - MYSQL_DATABASE=sakila
       - MYSQL_USER=homestead
       - MYSQL_PASSWORD=secret
     ports:
       - 3306:3306
+    volumes:
+        - ./sakila-db:/docker-entrypoint-initdb.d
 
   redis:
     image: redis:5.0-alpine
     container_name: redis-server
     networks:
       - laravel-docker
+    # ports:
+    #   - 6379:6379
+  rediscommander:
+    image: rediscommander/redis-commander:latest
+    container_name: redis-commander
+    networks:
+      - laravel-docker
+    environment:
+      - REDIS_HOSTS=local:redis-server:6379
     ports:
-      - 6379:6379
+      - 8081:8081
 
 networks:
   laravel-docker:
-    driver: bridge
+    # driver: bridge

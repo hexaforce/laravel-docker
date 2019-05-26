@@ -1,6 +1,13 @@
 # TL;DR
 
 ```
+hexaforce:~ relics9$ docker version
+Client: Docker Engine - Community
+ Version:           18.09.2
+
+hexaforce:~ relics9$ docker-compose version
+docker-compose version 1.23.2, build 1110ad01
+
 hexaforce:~ relics9$ php -v
 PHP 7.3.5 (cli) (built: May  2 2019 12:40:36) ( NTS )
 
@@ -36,4 +43,10 @@ docker-compose up
 
 http://localhost:8080/
 
-![SS](ss.png "SS")
+![SS](ss.png "SS")  
+
+## gui
+
+* Redis Commander  
+http://localhost:8081/  
+
