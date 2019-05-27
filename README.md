@@ -33,6 +33,9 @@ cd laravel
 php artisan key:generate
 composer install
 
+#### Or your Laravel repository
+# git submodule add https://github.com/<your>/<laravel-repository>.git laravel
+
 cd ..
 
 docker-compose up 
