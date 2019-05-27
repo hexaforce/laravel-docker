@@ -25,6 +25,7 @@ git clone git@github.com:hexaforce/laravel-docker.git
 
 cd laravel-docker
 
+#### New creaate Laravel application
 laravel new laravel
 cat .env.docker > ./laravel/.env
 
