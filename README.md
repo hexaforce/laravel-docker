@@ -31,8 +31,8 @@ cat .env.docker > ./laravel/.env
 
 cd laravel
 
-php artisan key:generate
 composer install
+php artisan key:generate
 
 #### Or your Laravel repository
 # git submodule add https://github.com/<your>/<laravel-repository>.git laravel
