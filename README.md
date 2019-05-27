@@ -50,3 +50,5 @@ http://localhost:8080/
 * Redis Commander  
 http://localhost:8081/  
 
+## php debug
+![debug](php-debug.png "debug") 
