@@ -49,10 +49,10 @@ http://localhost:8080/
 
 ![SS](ss.png "SS")  
 
-## gui
+## php debugging
+![debug](php-debug.png "debug") 
+
+## redis gui
 
 * Redis Commander  
 http://localhost:8081/  
-
-## php debug
-![debug](php-debug.png "debug") 
