@@ -56,3 +56,9 @@ http://localhost:8080/
 
 * Redis Commander  
 http://localhost:8081/  
+
+## windows 
+It may not work with docker for windows.Please refer to the following.  
+https://forums.docker.com/t/volume-mounts-in-windows-does-not-work/10693/163  
+Installing [Cygwin](https://www.cygwin.com/) may help.  
+
